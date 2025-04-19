@@ -1,0 +1,71 @@
+body {
+    background-image: url('pexels-enginakyurt-1435752.jpg'); 
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-position: center; 
+    height: 100vh; 
+    margin: 0; 
+    padding: 0; 
+    overflow: hidden;
+	display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    text-align: center; 
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); 
+    z-index: -1;
+}
+
+h1 {
+    color: #ffffff;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    font-size: 3rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+p {
+    color: #ffffff;
+    text-shadow: 1px 1px 3px rgba(160, 41, 41, 0.7);
+    font-size: 1.2rem;
+    font-weight: 700;
+    line-height: 1.5;
+}
+
+#first, #second, #third {
+    text-shadow: 1px 1px 3px rgba(185, 0, 0, 0.7);
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+/* Style for list items (tasks) */
+li {
+    font-size: 1.5rem; /* Makes the text larger */
+    padding: 10px 15px; /* Adds spacing around the text */
+    margin: 10px 0; /* Adds space between tasks */
+    border: 2px solid #ffffff; /* Adds a border around the task */
+    border-radius: 5px; /* Rounds the corners */
+    background-color: rgba(255, 255, 255, 0.1); /* Slightly transparent background */
+    color: #ffffff; /* White text */
+    list-style: none; /* Removes bullet points */
+    cursor: pointer; /* Changes cursor to pointer on hover */
+    transition: all 0.3s ease; /* Smooth transition for hover and glow effects */
+}
+
+/* Glow effect when task is marked as done */
+li.done {
+    background-color: rgba(0, 255, 0, 0.2); /* Light green background */
+    border-color: #00ff00; /* Green border */
+    box-shadow: 0 0 15px #00ff00; /* Green glow effect */
+    color: #ffffff; /* Keeps the text white */
+    text-decoration: line-through; /* Strikes through the text */
+}
